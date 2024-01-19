@@ -1,8 +1,6 @@
-var div_n="3"
-
 export default function Third() {
   return (
-    <div id={div_n} className="Third">ID3
+    <div id="div3" className="content">ID3
 
 
     <nav className="navbar navbar-expand-lg navbar-dark bg-dark">

@@ -1,23 +1,30 @@
-body, html{
+body{
+  /* overflow: hidden; */
+  border:0px;
 }
 
-.Initial{
+.content{
+  height: 100vh;
+  width: 100%;
+  border-bottom: 10px solid black;
+}
+
+#div1{
   background-color: BLUE;
-  height: 100vh;
-}
-
-.Second{
-  background-color: red;
-  height: 100vh;
-}
-
-.Third{
-  background-color: green;
-  height: 100vh;
   
 }
 
-.Fourth{
+#div2{
+  background-color: red;
+  
+}
+
+#div3{  background-color: green;
+  
+  
+}
+
+#div4{
   background-color: yellow;
-  height: 100vh;
+  
 }
