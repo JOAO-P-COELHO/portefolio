@@ -24,7 +24,7 @@ document.addEventListener("DOMContentLoaded", () => {
   // Função para rolar para a div anterior
   function scrollToPrevDiv() {
     if (currentDivIndex > 0) {
-      currentDivIndex--;
+      currentDivIndex--; 
       divs[currentDivIndex].scrollIntoView({ behavior: 'smooth' });
     } 
   }
@@ -48,7 +48,7 @@ document.addEventListener("DOMContentLoaded", () => {
     }
   }
 
-  // Adiciona um ouvinte de rolagem ao corpo do documento
+  
   document.body.addEventListener("wheel", handleScroll);
 });
   

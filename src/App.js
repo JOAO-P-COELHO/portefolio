@@ -5,81 +5,75 @@ import Fourth from "./components/Fourth";
 import { useEffect, useRef } from "react";
 console.log("Função App(fora do componente)")
 
-
-
-document.addEventListener("DOMContentLoaded", () => {
-  const divs = document.querySelectorAll(".content"); 
-  console.log(divs) 
-  let currentDivIndex = 0;
-  let isScrolling = false;
+let currentDivIndex = 0;
+let isScrolling = false;
+let nr_divs = 4
 
   // Função para rolar para a próxima div
-  function scrollToNextDiv() {
-    if (currentDivIndex < divs.length - 1) {
+  function scrollToNextDiv(imgNode) {
+    console.log("chamou") 
+
+    if (currentDivIndex < nr_divs - 1) {
       currentDivIndex++;
-      divs[currentDivIndex].scrollIntoView({ behavior: 'smooth' });
-    } 
+      imgNode[currentDivIndex].scrollIntoView({ behavior: 'auto' });
+    } // imgNode[1].scrollIntoView
   }
 
   // Função para rolar para a div anterior
-  function scrollToPrevDiv() {
+  function scrollToPrevDiv(imgNode) {
+    console.log("n chamou") 
     if (currentDivIndex > 0) {
       currentDivIndex--;
-      divs[currentDivIndex].scrollIntoView({ behavior: 'smooth' });
+      imgNode[currentDivIndex].scrollIntoView({ behavior: 'smooth' });
     } 
   }
 
-  // Manipula o evento de rolagem do mouse
-  function handleScroll(event) { // Porque é que tem ter event como parametro? Porque a seguir usa o event.deltaY (ou seja, o objeto event vai dar alguma coisa como input ao resto da função)
-    console.log(event) 
-    console.log(divs) 
-    if (!isScrolling) {
-      isScrolling = true;
-
-      setTimeout(() => {
-        if (event.deltaY > 0) {
-          scrollToNextDiv();
-        } else {
-          scrollToPrevDiv();
-        }
-
-        isScrolling = false;
-      }, 800); // Ajuste o tempo conforme necessário
-    }
-  }
-
-  // Adiciona um ouvinte de rolagem ao corpo do documento
-  document.body.addEventListener("wheel", handleScroll);
-});
-  
-
-
-
-
-
-
-export default function App() {
-  const listRef = useRef(null);
-  {console.log(listRef)}
-  
  
-  function scrollToIndex(index) {
-    console.log("True")
-    const listNode = listRef.current;
-    // This line assumes a particular DOM structure:
-    const imgNode = listNode.querySelectorAll(".content");
-    console.log(imgNode)
-    imgNode[2].scrollIntoView({
-      behavior: "smooth",
-      block: "nearest",
-      inline: "center",
-    });
-  }
+export default function App() {
+  const listRef = useRef(null); 
+  
+  useEffect(() => {
+  
+    const listNode = listRef.current;   
+    console.log("listNode", listNode)  
+    const imgNode = listNode.querySelectorAll(".content"); // This line assumes a particular DOM structure:
+    console.log("imgNode", imgNode)
+    document.addEventListener("load", div_node(imgNode));        
 
-  return (
+ 
+    function div_node(imgNode) { // Porque é que tem ter event como parametro? Porque a seguir usa o event.deltaY (ou seja, o objeto event vai dar alguma coisa como input ao resto da função)
+      console.log("aasdada", imgNode)
+
+      document.addEventListener("wheel", handleScroll);
+
+      function handleScroll(event) { 
+        console.log("cecnas")
+        console.log(event.deltaY)
+        console.log("aasdada", imgNode)
+        if (!isScrolling) {
+          isScrolling = true; 
+          console.log(event.deltaY)
+      
+          setTimeout(() => { 
+            if (event.deltaY > 0) {
+              scrollToNextDiv(imgNode);
+            } else {
+              scrollToPrevDiv(imgNode);
+            }
+      
+            isScrolling = false;
+          }, 800); // Ajuste o tempo conforme necessário
+        }
+      }
+
+    }
+
+  }, [currentDivIndex]);
    
-    <div onClick={scrollToIndex} className="App" ref={listRef}>
-      <Initial  teste="coiso" />
+  
+  return (
+    <div className="App" ref={listRef}>
+      <Initial/>
       <Second />
       <Third/>
       <Fourth />
