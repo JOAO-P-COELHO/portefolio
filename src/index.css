@@ -6,25 +6,42 @@ body{
 .content{
   height: 100vh;
   width: 100%;
-  border-bottom: 10px solid black;
+  border-bottom: 5px solid black;
 }
 
 #div1{
   background-color: BLUE;
-  
 }
 
 #div2{
   background-color: red;
-  
 }
 
-#div3{  background-color: green;
-  
-  
+#div3{  
+  background-color: green;
 }
 
 #div4{
-  background-color: yellow;
-  
+  background-color: yellow;  
+}
+
+#topbar{
+  background-color: white;
+  margin: 0%;
+  border: 0%;
+  display: flex;
+  padding:2px;
+  position: fixed;
+  z-index: 1;
+  width: 100%;
+}
+
+#my_img{
+border-radius: 50%;
+height: 50%;
+width: 50%;
+}
+
+#central{
+  display: flex;
 }
