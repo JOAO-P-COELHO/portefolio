@@ -11,24 +11,12 @@ body{
 .content{
   height: 100vh;
   width: 100%;
-  border-bottom: 5px solid black;
 }
 
-#div1, #div2{
+#div1, #div2, #div3, #div4{
   background-color: var(--branco);
 }
 
-#div2{
-  background-color: var(--branco);
-}
-
-#div3{  
-  background-color: green;
-}
-
-#div4{
-  background-color: yellow;  
-}
 
 #topbar{
   background-color: white;
@@ -37,10 +25,9 @@ body{
   display: flex;
   padding:2px;
   position: fixed;
-  z-index: 1;
+  z-index: 99;
   width: 100%;
 }
-
 
 
 #my_img{
@@ -51,16 +38,6 @@ position: relative;
 padding: 1%;
 
 }
-
-/* #central{
-  display: flex;
-} */
-
-/* #mystack{
-  position: relative;
-  top: 5rem;
-
-} */
 
 .icon{
   width: 14%;
@@ -73,15 +50,11 @@ padding: 1%;
   filter: invert(0%) sepia(5%) saturate(12%) hue-rotate(240deg) brightness(10%) contrast(100%);
 }
 
-#text_stack{
-
-}
-
 nav{
   background-color: var(--verde)!important;
   position: fixed;
   z-index: 1;
-  width: 100%;
+  width: 100vw;
 }
 
 .left{
@@ -117,6 +90,9 @@ nav{
   70%, 90% {width: 35%;}
 }
 
+.navbar{
+z-index: 99;
+}
 .navbar .nav-link {
   color:white;
 }
@@ -139,22 +115,108 @@ color: var(--verde);
   padding: 1%;
 }
 
-::-webkit-scrollbar {
-  width: 10px!important;
-}
 
-::-webkit-scrollbar-thumb {
-  background: var(--verde); 
+/* Cores scrollbar div 2 */
+/* ::-webkit-scrollbar {
+  width: 10px!important;
+  overflow: scroll;
+  z-index: ;
+} */
+
+/* ::-webkit-scrollbar-thumb {
+
   border-radius: 0%;
   outline-color:rgba(128, 128, 128, 0.525);
   outline-style: groove;
-  
+  overflow: scroll;
+  z-index: 0;
+} */
 
+/* ::-webkit-scrollbar-thumb:hover {
+  background: rgba(128, 128, 128, 0.525); 
+  outline-color:white;
+  overflow: scroll;
+  z-index: 0;
+}  */
+
+.tab-content{
+
+  z-index:0 ;
+}
+
+/* Cores dos anchor div 2 */
+.project a:link{
+  color: #4E4E4E;
+}
+
+.project a:hover{
+  color:grey;
+}
+
+/* Cores dos elementos da nav */
+.nav-pills .nav-link.active, .nav-pills .show>.nav-link{
+  background-color: grey;
+  border-radius: 0%;
+  color: white;
 }
 
 
+.nav-link, .nav-link:hover {
+  color: black;
+  background-color: rgba(128, 128, 128, 0.245);
+  
+}
 
-::-webkit-scrollbar-thumb:hover {
-  background: rgba(128, 128, 128, 0.525); 
-  outline-color:white;
+.nav-pills .nav-link {
+  border-radius: 0%;
+}
+
+.alig_div2{
+  padding:auto;
+  vertical-align: middle;
+  height: 90%
+}
+
+#carouselExampleCaptions{
+
+  max-height:100%;
+  max-width:100%;
+  padding: 0; 
+  border: 0 !important;
+  margin:0;
+
+
+}
+
+.carousel-caption {
+  font-size: 100%;
+  color: white!important; 
+  background-color: black;
+  opacity: 0.7;
+  width: 100%;
+  left:0;
+  bottom: 7%;
+} 
+
+
+.carousel-inner img{
+  object-fit: cover;
+  width:100vw;
+  height: 94vh;
+  
+} 
+
+.carousel-control-next-icon, .carousel-control-prev-icon{
+  color: blue;
+  border-radius: 10%;
+  background-color: black;
+  opacity: 0.7;
+}
+
+#img_so{
+  object-fit: scale-down;
+}
+
+.contacts_talk{
+
 }

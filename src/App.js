@@ -32,43 +32,43 @@ let nr_divs = 4
 export default function App() {
   const listRef = useRef(null); 
   
-  useEffect(() => {
+  // useEffect(() => {
   
-    const listNode = listRef.current;   
-    console.log("listNode", listNode)  
-    const imgNode = listNode.querySelectorAll(".content"); // This line assumes a particular DOM structure:
-    console.log("imgNode", imgNode)
-    document.addEventListener("load", div_node(imgNode));        
+  //   const listNode = listRef.current;   
+  //   console.log("listNode", listNode)  
+  //   const imgNode = listNode.querySelectorAll(".content"); // This line assumes a particular DOM structure:
+  //   console.log("imgNode", imgNode)
+  //   document.addEventListener("load", div_node(imgNode));        
 
  
-    function div_node(imgNode) { // Porque é que tem ter event como parametro? Porque a seguir usa o event.deltaY (ou seja, o objeto event vai dar alguma coisa como input ao resto da função)
-      console.log("aasdada", imgNode)
+  //   function div_node(imgNode) { // Porque é que tem ter event como parametro? Porque a seguir usa o event.deltaY (ou seja, o objeto event vai dar alguma coisa como input ao resto da função)
+  //     console.log("aasdada", imgNode)
 
-      document.addEventListener("wheel", handleScroll);
+  //     document.addEventListener("wheel", handleScroll);
 
-      function handleScroll(event) { 
-        console.log("cecnas")
-        console.log(event.deltaY)
-        console.log("aasdada", imgNode)
-        if (!isScrolling) {
-          isScrolling = true; 
-          console.log(event.deltaY)
+  //     function handleScroll(event) { 
+  //       console.log("cecnas")
+  //       console.log(event.deltaY)
+  //       console.log("aasdada", imgNode)
+  //       if (!isScrolling) {
+  //         isScrolling = true; 
+  //         console.log(event.deltaY)
       
-          setTimeout(() => { 
-            if (event.deltaY > 0) {
-              scrollToNextDiv(imgNode);
-            } else {
-              scrollToPrevDiv(imgNode);
-            }
+  //         setTimeout(() => { 
+  //           if (event.deltaY > 0) {
+  //             scrollToNextDiv(imgNode);
+  //           } else {
+  //             scrollToPrevDiv(imgNode);
+  //           }
       
-            isScrolling = false;
-          }, 800); // Ajuste o tempo conforme necessário
-        }
-      }
+  //           isScrolling = false;
+  //         }, 800); // Ajuste o tempo conforme necessário
+  //       }
+  //     }
 
-    }
+  //   }
 
-  }, [currentDivIndex]);
+  // }, [currentDivIndex]);
    
   
   return (
