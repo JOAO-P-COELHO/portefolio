@@ -1,16 +1,22 @@
 :root {
-  --verde: #288E7D;
+  --verde: #303030;
   --branco: white;
 }
 
-body{
+html, body{
   overflow: hidden;
   border:0px;
+  height: 100vh!important;
+  width: 100vw!important;
+  margin:0 !important;
+  padding:0!important;
+  border:0!important;
+
 }
 
 .content{
   height: 100vh;
-  width: 100%;
+  width: 100vw;
 }
 
 #div1, #div2, #div3, #div4{
@@ -25,18 +31,15 @@ body{
   display: flex;
   padding:2px;
   position: fixed;
-  z-index: 99;
+  z-index: 98;
   width: 100%;
 }
 
 
 #my_img{
 border-radius: 20%;
-width: 80%;
-height: 90%;
+width: 32rem;
 position: relative;
-padding: 1%;
-
 }
 
 .icon{
@@ -59,17 +62,16 @@ nav{
 
 .left{
   text-align: center;
+  padding:0;
 }
 
 #talk{
-  padding-top: 2%;
-  padding-bottom: 1%;
-
+  text-align: center;
   color: var(--verde)
   
 }
 
-#talk::before{
+/* #talk::before{
   content: attr(data-text);
   padding-top: 2%;
   padding-bottom: 1%;
@@ -88,7 +90,7 @@ nav{
 @keyframes animate{
   0%, 10%, 100% {width: 5%;}
   70%, 90% {width: 35%;}
-}
+} */
 
 .navbar{
 z-index: 99;
@@ -107,7 +109,7 @@ color: var(--verde);
 
 .Projs{
   display:flex;
-  overflow: auto;
+  overflow-x: scroll;
   white-space: pre;
 }
 
@@ -140,7 +142,6 @@ color: var(--verde);
 }  */
 
 .tab-content{
-
   z-index:0 ;
 }
 
@@ -173,8 +174,9 @@ color: var(--verde);
 
 .alig_div2{
   padding:auto;
-  vertical-align: middle;
-  height: 90%
+  margin: auto;
+  height: 90%;
+  width: 100%;
 }
 
 #carouselExampleCaptions{
@@ -184,8 +186,6 @@ color: var(--verde);
   padding: 0; 
   border: 0 !important;
   margin:0;
-
-
 }
 
 .carousel-caption {
@@ -213,10 +213,130 @@ color: var(--verde);
   opacity: 0.7;
 }
 
+/* Imagem paisagem na div 3 */
 #img_so{
   object-fit: scale-down;
 }
 
-.contacts_talk{
+/* Personalizar icons no Contacts */
+#socials ul {
+  position: relative;
+  display: flex;
+  margin-top: 10%;
+  width: 100%;
+  justify-content: center;
+}
+#socials ul li {
+  position: relative;
+  list-style: none;
+  margin: 0 5%;
+  cursor: pointer;
+}
+#socials ul li a {
+  text-decoration: none;
+}
+#socials ul li a .fa-brands, .fa-solid, .fa-map-marker-alt {
+  font-size: 5vw;
+  color: #222;
+}
+#socials ul li a::before {
+  font-family: "FontAwesome";
+  position: absolute;
+  top: 0;
+  left: 0;
+  font-size: 5vw;
+  height: 0;
+  overflow: hidden;
+  transition: 0.5s ease-in-out;
+}
 
+#socials ul li:nth-child(1) a::before {
+  font-size: 5vw;
+  content: "\f0e0";
+  color: #505050;
+  border-bottom: 4px solid #505050;
+  top: -1.2rem;
+}
+
+#socials ul li:nth-child(2) a::before {
+  font-size: 5vw;
+  content: "\f08c";
+  color: #0077b5;
+  border-bottom: 4px solid #0077b5;
+  top: -1.2rem;
+}
+
+#socials ul li:nth-child(3) a::before {
+  font-size: 5vw;
+  content: "\f092";
+  color: #505050;
+  border-bottom: 4px solid #505050;
+  top: -1.2rem;
+}
+
+#socials ul li:nth-child(4) a::before {
+  font-size: 5vw;
+  content: "\f16d";
+  background-image: linear-gradient(45deg, 
+    #f09433 0%,#e6683c 25%,#dc2743 50%,#cc2366 75%,
+    #bc1888 100%);
+  -webkit-background-clip: text;
+   -webkit-text-fill-color: transparent;
+  border-bottom: 4px solid #dc2743;
+  top: -1.2rem;
+  
+}
+
+#socials ul li:nth-child(5) a::before {
+  font-size: 5w;
+  content: "\f3c5";
+  color: var(--verde);
+  border-bottom: 4px solid var(--verde);
+  top:-1.2rem;
+}
+
+
+#socials ul li:hover a::before {
+  height: 9rem;
+}
+
+#socials{
+  display:flex;
+  flex-direction: column;
+}
+
+#footer{
+
+border: 2px solid black;
+width: 100%;
+text-align: center;
+padding:auto;
+
+
+}
+
+#body_contacts{
+margin:1%;
+}
+
+#central{
+  display: flex;
+  background-color: red;
+  height: 70%!important;
+  align-items: center;
+  flex-direction: row;
+  justify-content:space-between;
+
+}
+
+#mystack, #text_stack{
+  background-color: blue;
+  padding:0;
+  margin: 0;
+  border:0;
+}
+
+.main_text{
+font-size: 5vw;
+color: 
 }
