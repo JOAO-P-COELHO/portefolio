@@ -207,10 +207,11 @@ color:white ;
 
 
 #stack_ref{
-  color: 	green;
+  color: 	gold;
   font-size: 1.3vw;
-  font-weight: bold;
+  /* font-weight: bold; */
   font-style: italic;
+  letter-spacing: 1px;
 }
 
 #mystack{
