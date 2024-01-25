@@ -1,6 +1,7 @@
 import Space from '../external/Space2.png';
 import Building from '../external/site3.jpg';
 import Local from '../external/local.jpg';
+import ProjCompo from './ProjCompo';
 
 export default function Third() {
   return (
@@ -64,7 +65,7 @@ export default function Third() {
             <img src={Local}alt="..."/>
             <div className="carousel-caption d-none d-md-block">
               <h5>I'm this. Probably more.</h5>
-              <p>I like the Nature - what a surprise... from a former scientist! I like hiking and I like exercising - maybe to much.</p>
+              <p>I like the Nature - what a surprise... from a former scientist! I like hiking and I like exercising - maybe a little to much.</p>
             </div>
           </div>
         </div>

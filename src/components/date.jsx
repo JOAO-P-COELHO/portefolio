@@ -7,8 +7,8 @@ let year = d.getFullYear();
 
 export default function date(){
     return(
-        <footer id="footer">
-            <p>  - JC. It's {year} </p>
+        <footer className="text-center" id="footer">
+            <p>  JC - {year} © </p>
         </footer>   
     )
 }

@@ -3,22 +3,34 @@ import myImg from '../external/teste.jpg';
 import jQueryIcon from '../external/jquery_icon.svg';
 import { useState } from 'react';
 import { useEffect } from 'react';
+import python from '../external/python.svg';
+
+import React_icon from "../external/tech/React.png"
+import Bootstrap_icon from "../external/tech/Bootstrap.png"
+import JavaScript_icon from "../external/tech/JavaScript.png"
+import Python_icon from "../external/tech/Python.png"
+import HTML_icon from "../external/tech/HTML.png"
+import jQuery_icon from "../external/tech/jQuery.png"
+import CSS_icon from "../external/tech/CSS.png"
+import Sass_icon from "../external/tech/Sass.png"
 
 
 
-// THIS IS A BACK UP VERSION
 
-
+// METER AQUILO DAS CORES QUE ESTÁ NO FINAL NO COISO DO LINKED IN E DO GITHUB
 // TENHO DE CORRIGIR A QUESTÃO DE SE MUDAR PARA UMA DIV A PARTIR DE CLIQUES, O VALOR DE DIV JÁ NÃO É ATUALIZAZO (JÁ QUE É ATUALIZADO COM O SCROLL DO RATO)
 // Falta corrigir aquilo da linha vermelha a apagar e meter nome
+// Nav quando é clicada está transparente
 // Corrigir NAV - ESTE É DIFERENTE DO NAV NAS OUTRAS PÁGINAS
 
 
 let stack = ["React", "Bootstrap", "JavaScript", "Python", "HTML", "jQuery", "CSS",  "Sass"]
+let icons = [React_icon, Bootstrap_icon, JavaScript_icon, Python_icon, HTML_icon, jQuery_icon, CSS_icon, Sass_icon]
 
-export default function Initial() {
+export default function Initial2() {
   
   const [num, setNum] = useState(0);  
+ 
   const toDo = () => {
 
     if (num<stack.length-1){setNum(num + 1);}
@@ -33,15 +45,8 @@ useEffect(() => {
 
   return (
     <div id="div1" className="content">
-      
-      {/* <div id="topbar">
-        <h1><a href="#div1">Home</a></h1>
-        <h1><a href="#div2">myProjects</a></h1>
-        <h1><a href="#div3">About Me</a></h1>
-        <h1><a href="#div4">Contacts</a></h1>
-      </div> */}
     
-      <nav className="navbar navbar-expand-lg navbar-light d-flex justify-content-center ">
+      <nav className="navbar navbar-expand-lg d-flex justify-content-center ">
         <div className="d-flex justify-content-center">
           {/* <a className="navbar-brand" href="#">João P. Coelho</a> */}
           <button className="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
@@ -67,29 +72,44 @@ useEffect(() => {
         </div>
       </nav>
 
-      <h1 id="talk" datatext="Hi. I'm João P. Coelho.">João P. Coelho.</h1>
-      <div id="central" class="">
-      
-      
-        <div id="leftest row">
-          <h1 class="text-center main_text">Front-End Developer</h1>
-          <h2 class="text-center main_text">I also like Back-End engineering - a lot.</h2>
-        </div>
-        
-        <div className="left row align-self-center">
+      <div id="central">
 
-          <img className='col-sm' src={myImg} alt="My Image" id="my_img"/>
-        </div>
+        <div id="left">
+            <h2 className="text-center main_text_h2">Front-End Developer</h2>
+            <h3 className="text-center main_text_h3">I like Back-End engineering also - a lot.</h3>
+            <div id='social_front_page'>
+              <li>
+                <a href="https://www.linkedin.com/in/jp-coelho/" target="_blank">
+                <i className="fa-brands fa-linkedin front_page_icons"></i></a>
+              </li>
+              <li>
+                <a href="https://github.com/JOAO-P-COELHO" target="_blank">
+                <i className="fa-brands fa-square-github front_page_icons"></i></a>
+            </li>
 
-        <div className="row  ">
-          <div className='col-sm' id="mystack">
-            <div className='d-flex justify-content-center ' id="text_stack">
-              <h1 className='main_text'>Tech Stack: </h1> 
             </div>
-            <h2 id="stack_ref" className='p_stack_text d-flex justify-content-center class="col-sm text-center main_text'>
-            {stack[num]}
-            </h2>
-            <div className='container' id="icons"> 
+        </div>
+
+        <div id="middle">
+          <div id="me_div">
+            <h1 id="me">João P. Coelho</h1>
+          </div>
+          <img id="my_img" src={myImg} alt="My Image"/>
+          
+        </div>
+
+        <div id="right">
+        <div className="row  ">
+          <div id="mystack">
+            <div className='d-flex justify-content-center ' id="text_stack">
+              <h1 className='main_text_h2'><span style={{"color": "white"}} className='main_text_h3'>my</span>Stack: </h1> 
+            </div>
+            <h2 id="stack_ref" className='p_stack_text d-flex justify-content-center className="col-sm text-center main_text_h3'>
+              {stack[num]}
+              </h2>
+              <img id="moving_icon" src={icons[num]}/>
+
+              <div className='container' id="icons"> 
               
               <div align="center" className="container">
 
@@ -124,14 +144,11 @@ useEffect(() => {
                             </svg>
               </div>
 
+              </div>
             </div>
           </div>
         </div>
-
       </div>
-
-   
-
     </div>
   );
 }

@@ -1,4 +1,3 @@
-import {Link} from 'react-scroll';
 import Date from './date';
 
 
@@ -9,79 +8,85 @@ import Date from './date';
 export default function Fourth() {
   return (
     <div id="div4" className="content">
-      <nav class="navbar navbar-expand-lg navbar-light d-flex justify-content-center ">
-            <div class="d-flex justify-content-center">
-              {/* <a class="navbar-brand" href="#">João P. Coelho</a> */}
-              <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
-                <span class="navbar-toggler-icon"></span>
-              </button>
-              <div class="collapse navbar-collapse" id="navbarNav">
-                <ul class="navbar-nav">
-                  <li id="home" class="nav-item">
-                    <a class="nav-link" aria-current="page" href="#div1">Home</a>
-                  </li>
-                  <li class="nav-item">
-                    <a class="nav-link" href="#div2">.myProjects</a>
-                  </li>
-                  <li class="nav-item">
-                    <a class="nav-link" href="#div3">About Me</a>
-                  </li>
-                  <li class="nav-item">
-                    <a class="nav-link" href="#div4">Contacts</a>
-                  </li>
+      <nav className="navbar navbar-expand-lg d-flex justify-content-center ">
+        <div className="d-flex justify-content-center">
+          {/* <a className="navbar-brand" href="#">João P. Coelho</a> */}
+          <button className="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+            <span className="navbar-toggler-icon"></span>
+          </button>
+          <div className="collapse navbar-collapse" id="navbarNav">
+            <ul className="navbar-nav">
+              <li id="home" className="nav-item">
+                <a className="nav-link" aria-current="page" href="#div1">Home</a>
+              </li>
+              <li className="nav-item">
+                <a className="nav-link" href="#div2">.myProjects</a>
+              </li>
+              <li className="nav-item">
+                <a className="nav-link" href="#div3">About</a>
+              </li>
+              <li className="nav-item">
+                <a className="nav-link" href="#div4">Contact</a>
+              </li>
 
-                </ul>
-              </div>
-            </div>
+            </ul>
+          </div>
+        </div>
       </nav>
-      <div id="contacts_talk" className='text-center'>
-        <h1>Do you like what you see?</h1>
-        <i class="bi bi-linkedin"></i>
-        <h2> To be honest, I'm all about a good challenge.</h2>
-        <h1>Get in touch with me.</h1>
+
+      <div  id="all_end_page">
+      <div  id="contacts_talk" className='text-center'>
+        <h1 className='main_text_h2'>Get in touch.</h1>
+        <h2 className='main_text_h3' style={{"color":"white"}}>I'm all about a good challenge.</h2>
+      </div>
+
+      <div id="direct_contact" className=''>
+        <div id="email" >
+          <i className="fa-solid fa-envelope"></i>
+          <p>joaocoelho.sp@gmail.com</p>
+        </div>
+
+        <div id="address">
+          <i className="fas fa-map-marker-alt"></i>
+          <p>Lisboa, Portugal | Remote </p>
+        </div>
         
       </div>
       <div id="body_contacts">
         <div id="socials" >
-          <ul className='ul_Social container'>
-          <li>
-              <a href="mailto: joaocoelho.sp@gmail.com" target="_blank">
-              <i class="fa-solid fa-envelope"></i></a>
-            </li>
+          <ul className='ul_Social'>
                     
             <li>
               <a href="https://www.linkedin.com/in/jp-coelho/" target="_blank">
-              <i class="fa-brands fa-linkedin"></i></a>
+              <i className="fa-brands fa-linkedin"></i></a>
             </li>
 
             <li>
               <a href="https://github.com/JOAO-P-COELHO" target="_blank">
-              <i class="fa-brands fa-square-github"></i></a>
+              <i className="fa-brands fa-square-github"></i></a>
             </li>
             <li>
               <a href="https://www.instagram.com/joao_ppsc/" target="_blank">
-              <i class="fa-brands fa-instagram"></i></a>
+              <i className="fa-brands fa-instagram"></i></a>
             </li>
-            <li>
-            <a target="_blank">
-              <i class="fas fa-map-marker-alt"></i></a>
-              
-            </li>
-            
+
           </ul>
-          {/* <span className="hide">Lisboa, Portugal</span> */}
+
         </div>
 
         
         
       </div>
       <div className="container left align-self-center">
-        <h1 id="talk" datatext="Hi. I'm João P. Coelho.">I'm João P. Coelho. And this is myPortefolio.</h1>
+        
+        <h1 id="talk" style={{"fontSize":"1.5vw", "padding":"1vw"}} className="main_text_h2 text-center" >I'm João P. Coelho. And this is myPortefolio page.</h1>
+        <hr/>
         </div>
 
 
      < Date />
-     {/* <Link to="3">--------------------------Clicking will go to ID=3</Link> */}
+     </div>
+
      </div>
   );
 }

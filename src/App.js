@@ -1,9 +1,10 @@
-import Initial from "./components/Initial";
-import Second from "./components/Second";
-import Third from "./components/Third";
-import Fourth from "./components/Fourth";
+import { lazy } from 'react';
 import { useEffect, useRef } from "react";
-console.log("Função App(fora do componente)")
+
+const Initial = lazy(() => import("./components/Initial2"))
+const Second = lazy(() => import("./components/Second"))
+const Third  = lazy(() => import("./components/Third"))
+const Fourth = lazy(() => import("./components/Fourth"))
 
 let currentDivIndex = 0;
 let isScrolling = false;
