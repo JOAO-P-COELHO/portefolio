@@ -1,5 +1,5 @@
 
-import myImg from '../external/teste.jpg';
+import myImg from '../external/teste.JPG';
 import jQueryIcon from '../external/jquery_icon.svg';
 import { useState } from 'react';
 import { useEffect } from 'react';
