@@ -10,9 +10,9 @@ import ReactFreezeframe from 'react-freezeframe';
 
 export default function ProjCompo(props) {
   let images = props.local
-  const [gif, setGif] = useState(".jpg")
+  const [gif, setGif] = useState(".png")
   let Hover = () => setGif(".gif")
-  let Out = () => setGif(".jpg")
+  let Out = () => setGif(".png")
   console.log(images);  
 
 
@@ -28,7 +28,7 @@ export default function ProjCompo(props) {
                   src={require(`../external/projs/${images}${gif}`)} 
                   onMouseOver={Hover}
                   onMouseOut={Out}
-                  id="  "
+                  id="img_gif_png"
                   />
           
           <div id="acess">

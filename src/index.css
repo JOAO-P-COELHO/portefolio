@@ -250,11 +250,23 @@ height: 7.5vh;
 }
 
 .project{
-  padding: 1%;
+  padding: auto;
   display: flex;
   flex-direction: column;
   align-items: center;
+  margin: 0.5%;
 }
+
+#img_gif_png{
+  height: 35vh;
+  width: 30vw;
+  }
+  
+#img_gif_png:hover{
+  height: 35vh;
+  width: 30vw;
+  border: 2px solid grey;
+  }
 
 #project_image{
   width: 35vh;
@@ -547,4 +559,3 @@ padding-top:0%;
   /* background-color: blue !important; */
   
 }
-
