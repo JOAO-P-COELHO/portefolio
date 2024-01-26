@@ -257,9 +257,14 @@ height: 7.5vh;
   margin: 0.5%;
 }
 
+.project p{
+  font-size: 2vh;
+}
+
 #img_gif_png{
   height: 35vh;
   width: 30vw;
+  border: 2px solid transparent;
   }
   
 #img_gif_png:hover{
@@ -356,7 +361,7 @@ height: 7.5vh;
   height: 100%;
   
 
-  align-items: center;
+  align-items: end;
 
 }
 
