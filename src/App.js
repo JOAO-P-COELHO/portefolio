@@ -1,5 +1,12 @@
 import { lazy } from 'react';
 import { useEffect, useRef } from "react";
+import { pdfjs } from 'react-pdf';
+
+pdfjs.GlobalWorkerOptions.workerSrc = new URL(
+  'pdfjs-dist/build/pdf.worker.min.js',
+  import.meta.url,
+).toString();
+
 
 const Initial = lazy(() => import("./components/Initial2"))
 const Second = lazy(() => import("./components/Second"))

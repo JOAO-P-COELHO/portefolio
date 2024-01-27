@@ -76,7 +76,8 @@ useEffect(() => {
 
         <div id="left">
             <h2 className="text-center main_text_h2">Front-End Developer</h2>
-            <h3 className="text-center main_text_h3">Enthusiastic about Back-End engineering too - a lot.</h3>
+            <h3 className="text-center main_text_h3">Enthusiastic about Design and Back-End engineering too.</h3>
+            <h4 className="text-center main_text_h4">A lot.</h4>
             <div id='social_front_page'>
               <li>
                 <a href="https://www.linkedin.com/in/jp-coelho/" target="_blank">

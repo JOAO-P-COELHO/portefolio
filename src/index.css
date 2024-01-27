@@ -110,6 +110,12 @@ nav{
   font-family: 'Forum', serif;
 }
 
+.main_text_h4{
+  font-size: 1.1vw;
+  color: rgb(217, 203, 203);
+  font-family: 'Forum', serif;
+}
+
 #social_front_page{
   display:flex;
   justify-content:center;
@@ -123,13 +129,17 @@ nav{
   align-self: center;
 }
 
-.front_page_icons{
-color:white ;
+#social_front_page .fa-linkedin{
+color:#0077B5 ;
 } 
+
+#social_front_page .fa-square-github{
+  color:white ;
+  } 
 
 
 #social_front_page li a .fa-linkedin:hover{
-  color:  #0077b5 !important;
+  color:  #222 !important;
 }
 
 #social_front_page li a .fa-square-github:hover{
@@ -280,14 +290,14 @@ height: 7.5vh;
 
 
 /* Cores scrollbar div 2 */
-::-webkit-scrollbar {
+/* #div2 ::-webkit-scrollbar {
   width: 10px!important;
   overflow: scroll;
   z-index: ;
   
 }
 
-::-webkit-scrollbar-thumb {
+#div2 ::-webkit-scrollbar-thumb {
 
   border-radius: 0%;
   outline-color:grey;
@@ -298,13 +308,13 @@ height: 7.5vh;
   
 }
 
-::-webkit-scrollbar-thumb:hover {
+#div2 ::-webkit-scrollbar-thumb:hover {
   background: transparent; 
   outline-color:rgba(255, 255, 255, 0.552);
   overflow: scroll;
   z-index: 0;
   
-} 
+}  */
 
 .tab-content{
   z-index:0 ;
@@ -326,6 +336,7 @@ height: 7.5vh;
   background-color: grey;
   border-radius: 0%;
   color: white;
+
 }
 
 
@@ -350,18 +361,37 @@ height: 7.5vh;
 
 #v-pills-tab{
   background-color: #282828;
+  color: white !important;
+}
+
+#v-pills-tab{
+  background-color: #282828;
+  font-size: 1.4vw;
+}
+
+#v-pills-tab button:not(.active){
+  color:grey !important;
+  font-size: 2.5vh;
 }
 
 #v-pills-tab .active{
   background-color: #288E7D !important;
+  color: white !important;
+  border: 1px solid grey;
 }
 
 .flexed{
   display: flex;
   height: 100%;
-  
-
   align-items: end;
+}
+
+.project h1{
+  color: white
+}
+
+.project a,{
+  color: red;
 
 }
 
@@ -442,8 +472,8 @@ height: 7.5vh;
 #socials ul li:nth-child(1) a::before {
   font-size: 3vw;
   content: "\f08c";
-  color: #0077b5;
-  border-bottom: 4px solid #0077b5;
+  color: #0077B5;
+  border-bottom: 4px solid #0077B5;
   top: 0.2vw;
 }
 
@@ -541,6 +571,15 @@ padding-top:0%;
 
 /* Second Section */
 
+#publisher{
+  font-size: 2vh;
+}
+
+#publisher:ac{
+  color:grey !important;
+  font-size: 2.1vh;
+}
+
 .icons_acess{
   color: white;
   font-size: 1vw;
@@ -561,6 +600,24 @@ padding-top:0%;
 #v-pills-home, #v-pills-profile, #v-pills-messages, #v-pills-settings{
   width: 85vw!important;
   overflow-x: scroll!important;
-  /* background-color: blue !important; */
-  
+ 
+}
+
+.pdfs{
+  height: 70vh;
+  /* width: 100%; */
+  overflow-y: scroll;
+  overflow-x: none !important;
+}
+
+.pdfs_div{
+  display:flex !important;
+  gap: 1vw;
+  width: 400vw;
+  align-items: center;
+
+}
+
+.h1_pdfs{
+  padding-bottom: 1%;
 }
