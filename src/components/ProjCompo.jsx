@@ -13,14 +13,12 @@ export default function ProjCompo(props) {
   const [gif, setGif] = useState(".png")
   let Hover = () => setGif(".gif")
   let Out = () => setGif(".png")
-  console.log(images);  
-
 
     return(
 
         <div  className="project ">  
           
-          <a href={props.site} target="_blank"><h1>{props.title}</h1></a>
+          <a href={props.site} target="_blank"><h1 id="h1_projects_title">{props.title}</h1></a>
           <p> - {props.tech}</p>
           <p> - {props.description} </p>
           

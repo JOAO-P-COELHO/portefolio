@@ -1,53 +1,56 @@
 import { lazy } from 'react';
 import Pdfs from './Pdfs';
-// import ProjCompo from './ProjCompo';
-const ProjCompo = lazy(() => import('./ProjCompo'))
+import ProjCompo from './ProjCompo';
+// const ProjCompo = lazy(() => import('./ProjCompo'))
 
 
 
 export default function Second() {
-
+  
 
   return (
     <div id="div2" className="content">    
 
-      <nav className="navbar navbar-expand-lg navbar-light d-flex justify-content-center ">
-        <div className="d-flex justify-content-center">
-          <button className="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
-            <span className="navbar-toggler-icon"></span>
-          </button>
-          <div className="collapse navbar-collapse" id="navbarNav">
-            <ul className="navbar-nav">
-              <li id="home" className="nav-item">
-                <a className="nav-link" aria-current="page" href="#div1">Home</a>
-              </li>
-              <li className="nav-item">
-                <a className="nav-link" href="#div2">.myProjects</a>
-              </li>
-              <li className="nav-item">
-                <a className="nav-link" href="#div3">About Me</a>
-              </li>
-              <li className="nav-item">
-                <a className="nav-link" href="#div4">Contacts</a>
-              </li>
+    <nav className="navbar navbar-expand-lg d-flex justify-content-center ">
+      <div className="d-flex justify-content-center">
 
-            </ul>
-          </div>
+        <button className="navbar-toggler " type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+          <svg id="icon_nav" xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" className="bi bi-list" viewBox="0 0 16 16">
+            <path fillRule="evenodd" d="M2.5 12a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5m0-4a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5m0-4a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5"/>
+          </svg>
+        </button>
+        <div className="collapse navbar-collapse" id="navbarNav">
+          <ul className="navbar-nav">
+            <li id="home" className="nav-item">
+              <a className="nav-link" aria-current="page" href="#div1">Home</a>
+            </li>
+            <li className="nav-item current_div">
+              <a className="nav-link" href="#div2">.myProjects</a>
+            </li>
+            <li className="nav-item">
+              <a className="nav-link" href="#div3">About</a>
+            </li>
+            <li className="nav-item">
+              <a className="nav-link" href="#div4">Contact</a>
+            </li>
+
+          </ul>
         </div>
-      </nav>
+      </div>
+    </nav>
 
 
-      <div class="alig_div2">
-  <div class="nav flex-column nav-pills me-3 navbar-light" id="v-pills-tab" role="tablist" aria-orientation="vertical">
-    <button class="nav-link active" id="v-pills-home-tab" data-bs-toggle="pill" data-bs-target="#v-pills-home" type="button" role="tab" aria-controls="v-pills-home" aria-selected="true">Front-End</button>
+      <div className="alig_div2">
+  <div className="nav flex-column nav-pills me-3 navbar-light" id="v-pills-tab" role="tablist" aria-orientation="vertical">
+    <button className="nav-link active" id="v-pills-home-tab" data-bs-toggle="pill" data-bs-target="#v-pills-home" type="button" role="tab" aria-controls="v-pills-home" aria-selected="true">Front-End</button>
 
-    <button class="nav-link" id="v-pills-profile-tab" data-bs-toggle="pill" data-bs-target="#v-pills-profile" type="button" role="tab" aria-controls="v-pills-profile" aria-selected="false">Back-End</button>
+    <button className="nav-link" id="v-pills-profile-tab" data-bs-toggle="pill" data-bs-target="#v-pills-profile" type="button" role="tab" aria-controls="v-pills-profile" aria-selected="false">Back-End</button>
     
-    <button class="nav-link" id="v-pills-messages-tab" data-bs-toggle="pill" data-bs-target="#v-pills-messages" type="button" role="tab" aria-controls="v-pills-messages" aria-selected="false">Design <br></br> <span id="publisher">(Publisher)</span></button>
+    <button className="nav-link" id="v-pills-messages-tab" data-bs-toggle="pill" data-bs-target="#v-pills-messages" type="button" role="tab" aria-controls="v-pills-messages" aria-selected="false">Design <br></br> <span id="publisher">(Publisher)</span></button>
     
   </div>
-  <div class="tab-content" id="v-pills-tabContent">
-    <div class="tab-pane fade show active align-middle" id="v-pills-home" role="tabpanel" aria-labelledby="v-pills-home-tab">
+  <div className="tab-content" id="v-pills-tabContent">
+    <div className="tab-pane fade show active align-middle" id="v-pills-home" role="tabpanel" aria-labelledby="v-pills-home-tab">
     <div className="flexed">
 
     {/* THIS MUST BE DONE WITH A MAPS FUNCTION - REVIEW! */}
@@ -111,7 +114,7 @@ export default function Second() {
     </div>
     
     
-    <div  class="tab-pane fade align-middle " id="v-pills-profile" role="tabpanel" aria-labelledby="v-pills-profile-tab">
+    <div  className="tab-pane fade align-middle " id="v-pills-profile" role="tabpanel" aria-labelledby="v-pills-profile-tab">
     <div className="flexed">
     
       <ProjCompo 
@@ -194,20 +197,20 @@ Example of use: experiment(hat=hat,expected_balls={'red':2,'green':1}, num_balls
  
 
     
-    <div class="tab-pane fade" id="v-pills-messages" role="tabpanel" aria-labelledby="v-pills-messages-tab">
+    <div className="tab-pane fade" id="v-pills-messages" role="tabpanel" aria-labelledby="v-pills-messages-tab">
       <h1 className='h1_pdfs text-center'>This is some works I've done using Publisher (a Adobe Photoshop lookalike from Microsoft)</h1>
       <div className='pdfs_div'>
-        <Pdfs file="pdf1" />
-        <Pdfs file="pdf2" />
-        <Pdfs file="pdf3" />
-        <Pdfs file="pdf4" />
-        <Pdfs file="pdf5" />
-        <Pdfs file="pdf6" />
-        <Pdfs file="pdf7" />
-        <Pdfs file="pdf8" />
-        <Pdfs file="pdf9" />
-        <Pdfs file="pdf10" />
-        <Pdfs file="pdf11" />
+      <Pdfs k={1} file="pdf1" />
+      <Pdfs k={2} file="pdf2" />
+      <Pdfs k={3} file="pdf3" />
+      <Pdfs k={4} file="pdf4" />
+      <Pdfs k={5} file="pdf5" />
+      <Pdfs k={6} file="pdf6" />
+      <Pdfs k={7} file="pdf7" />
+      <Pdfs k={8} file="pdf8" />
+      <Pdfs k={9} file="pdf9" />
+      <Pdfs k={10} file="pdf10" />
+      <Pdfs k={11} file="pdf11" />
       </div>
 
     </div>

@@ -8,31 +8,34 @@ import Date from './date';
 export default function Fourth() {
   return (
     <div id="div4" className="content">
-      <nav className="navbar navbar-expand-lg d-flex justify-content-center ">
-        <div className="d-flex justify-content-center">
-          {/* <a className="navbar-brand" href="#">João P. Coelho</a> */}
-          <button className="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
-            <span className="navbar-toggler-icon"></span>
-          </button>
-          <div className="collapse navbar-collapse" id="navbarNav">
-            <ul className="navbar-nav">
-              <li id="home" className="nav-item">
-                <a className="nav-link" aria-current="page" href="#div1">Home</a>
-              </li>
-              <li className="nav-item">
-                <a className="nav-link" href="#div2">.myProjects</a>
-              </li>
-              <li className="nav-item">
-                <a className="nav-link" href="#div3">About</a>
-              </li>
-              <li className="nav-item">
-                <a className="nav-link" href="#div4">Contact</a>
-              </li>
 
-            </ul>
-          </div>
+    <nav className="navbar navbar-expand-lg d-flex justify-content-center ">
+      <div className="d-flex justify-content-center">
+
+        <button className="navbar-toggler " type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+          <svg id="icon_nav" xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" className="bi bi-list" viewBox="0 0 16 16">
+            <path fillRule="evenodd" d="M2.5 12a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5m0-4a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5m0-4a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5"/>
+          </svg>
+        </button>
+        <div className="collapse navbar-collapse" id="navbarNav">
+          <ul className="navbar-nav">
+            <li id="home" className="nav-item">
+              <a className="nav-link" aria-current="page" href="#div1">Home</a>
+            </li>
+            <li className="nav-item">
+              <a className="nav-link" href="#div2">.myProjects</a>
+            </li>
+            <li className="nav-item">
+              <a className="nav-link" href="#div3">About</a>
+            </li>
+            <li className="nav-item current_div">
+              <a className="nav-link" href="#div4">Contact</a>
+            </li>
+
+          </ul>
         </div>
-      </nav>
+      </div>
+    </nav>
 
       <div  id="all_end_page">
       <div  id="contacts_talk" className='text-center'>
@@ -40,15 +43,15 @@ export default function Fourth() {
         <h2 className='main_text_h3' style={{"color":"white"}}>I'm all about a good challenge.</h2>
       </div>
 
-      <div id="direct_contact" className=''>
+      <div id="direct_contact">
         <div id="email" >
-          <i className="fa-solid fa-envelope"></i>
-          <p>joaocoelho.sp@gmail.com</p>
+        <a className='address_email' href='mailto:joaocoelho.sp@gmail.com'><i className="fa-solid fa-envelope"></i></a>
+          <a href='mailto:joaocoelho.sp@gmail.com'><p className='address_email' >joaocoelho.sp@gmail.com</p></a>
         </div>
 
         <div id="address">
           <i className="fas fa-map-marker-alt"></i>
-          <p>Lisboa, Portugal | Remote </p>
+          <p className='address_email' >Lisboa, Portugal | Remote </p>
         </div>
         
       </div>

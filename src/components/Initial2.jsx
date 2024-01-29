@@ -1,5 +1,5 @@
 
-import myImg from '../external/teste.JPG';
+import myImg from '../external/me.JPG';
 import jQueryIcon from '../external/jquery_icon.svg';
 import { useState } from 'react';
 import { useEffect } from 'react';
@@ -48,14 +48,16 @@ useEffect(() => {
     
       <nav className="navbar navbar-expand-lg d-flex justify-content-center ">
         <div className="d-flex justify-content-center">
-          {/* <a className="navbar-brand" href="#">João P. Coelho</a> */}
-          <button className="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
-            <span className="navbar-toggler-icon"></span>
+
+          <button className="navbar-toggler " type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+            <svg id="icon_nav" xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" className="bi bi-list" viewBox="0 0 16 16">
+              <path fillRule="evenodd" d="M2.5 12a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5m0-4a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5m0-4a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5"/>
+            </svg>
           </button>
           <div className="collapse navbar-collapse" id="navbarNav">
             <ul className="navbar-nav">
-              <li id="home" className="nav-item">
-                <a className="nav-link" aria-current="page" href="#div1">Home</a>
+              <li id="home" className="nav-item current_div">
+                <a className="nav-link c" aria-current="page" href="#div1">Home</a>
               </li>
               <li className="nav-item">
                 <a className="nav-link" href="#div2">.myProjects</a>
@@ -135,7 +137,7 @@ useEffect(() => {
                 {/*HTML   */}<svg className='col-6 col-sm-3 icon' xmlns="http://www.w3.org/2000/svg" viewBox="0 0 384 512">
                               <path d="M0 32l34.9 395.8L191.5 480l157.6-52.2L384 32H0zm308.2 127.9H124.4l4.1 49.4h175.6l-13.6 148.4-97.9 27v.3h-1.1l-98.7-27.3-6-75.8h47.7L138 320l53.5 14.5 53.7-14.5 6-62.2H84.3L71.5 112.2h241.1l-4.4 47.7z"/>
                             </svg>
-                            <img id="teste" src={jQueryIcon} />
+                            <img id="jQ" src={jQueryIcon} />
                 {/* Jquery<span id="jquery" className="ui-icon ui-icon-jquery icon"></span> */}
                 {/*CSS   */}<svg className='col-6 col-sm-3 icon' xmlns="http://www.w3.org/2000/svg" viewBox="0 0 384 512">
                               <path d="M0 32l34.9 395.8L192 480l157.1-52.2L384 32H0zm313.1 80l-4.8 47.3L193 208.6l-.3 .1h111.5l-12.8 146.6-98.2 28.7-98.8-29.2-6.4-73.9h48.9l3.2 38.3 52.6 13.3 54.7-15.4 3.7-61.6-166.3-.5v-.1l-.2 .1-3.6-46.3L193.1 162l6.5-2.7H76.7L70.9 112h242.2z"/>

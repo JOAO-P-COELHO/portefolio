@@ -32,25 +32,68 @@ html, body{
 }
 
 
-#topbar{
-  background-color: white;
-  margin: 0%;
-  border: 0%;
-  display: flex;
-  padding:2px;
-  position: fixed;
-  z-index: 98;
-  width: 100%;
-}
-
 nav{
   background-color: #282828;
   position: fixed;
   z-index: 1;
   width: 100vw;
+  font-size: 2.5vh;
+  padding-top: 1.5% !important;
+  height: 7.5vh;
+  padding-bottom: 1.5% !important;
+  text-align: center;
 
 }
 
+
+
+.navbar-collapse, .navbar-toggler{
+  background-color:  #282828;
+  border-radius: 0% !important;
+
+}
+
+#icon_nav, .navbar-toggler{
+  color: white !important;
+  font-size: 4vh;
+  border: none;
+
+}
+
+.special{
+  background-color: #282828;
+  position: absolute;
+  z-index: 9000;
+  top: 0px;
+  opacity: 0.5;
+}
+
+.special:hover{
+  z-index: 9000;
+  top: 0px;
+  opacity: 1;
+}
+
+
+#navbarNav{
+  width: 30vw;
+  justify-content: center;
+}
+
+
+
+#navbarNav > ul, .nav-link{
+  background-color: transparent !important;
+}
+
+.navbar{
+z-index: 99;
+height: 7.5vh;
+}
+
+.navbar .nav-link {
+  color:white;
+}
 
 .icon{
   width: 12.5%;
@@ -60,7 +103,7 @@ nav{
 
 }
 
-#teste{
+#jQ{
   width:10%;
   height:10.5%;
   filter: invert(0%) sepia(5%) saturate(12%) hue-rotate(240deg) brightness(1000%) contrast(100%);
@@ -106,13 +149,13 @@ nav{
   
 .main_text_h3{
   font-size: 1.3vw;
-  color: green;
+  color: #408484;
   font-family: 'Forum', serif;
 }
 
 .main_text_h4{
   font-size: 1.1vw;
-  color: rgb(217, 203, 203);
+  color: rgb(223, 223, 223);
   font-family: 'Forum', serif;
 }
 
@@ -163,7 +206,7 @@ color:#0077B5 ;
 #my_img{
   border-radius: 0% 10%;
   width: 100%;
-  border: 2px solid transparent;
+  border: 3px solid transparent;
   animation-name: shadow;
   animation-duration: 8s;
   animation-iteration-count: infinite;
@@ -172,16 +215,19 @@ color:#0077B5 ;
 
 @keyframes shadow {
   0%   {box-shadow: -5px 0px 10px 1px #0077b5;
-  border-top: 2px solid transparent;}
-  12.5% {box-shadow: -2.5px 2.5px 15px 1px #00afb5;}
+  border-top: 3px solid transparent;}
+  12.5% {box-shadow: -2.5px 2.5px 15px 1px #00afb5;
+    border-radius: 2.5% 5% 2.5%;}
   25%  {box-shadow: 0px 5px 10px 1px #00afb5;
     border-radius: 5% 10% 5%;
-    border-left: 2px solid transparent;}
-  37.5%{box-shadow: 2.5px 2.5px 15px 1px #00afb5;}
+    border-left: 3px solid transparent;}
+  37.5%{box-shadow: 2.5px 2.5px 15px 1px #00afb5;
+    border-radius: 7.5% 5% 7.5%;}
   50%  {box-shadow: 5px 0px 10px 1px #6edabf;
   border-radius: 10% 0% 10%;
-  border-bottom: 2px solid transparent;}
-  62.5%{box-shadow: 2.5px -2.5px 13px 1px #22878a;}
+  border-bottom: 3px solid transparent;}
+  62.5%{box-shadow: 2.5px -2.5px 13px 1px #22878a;
+    border-radius: 7.5% 5% 7.5%;}
   75% {box-shadow: 0px -5px 10px 1px #00afb5;
     border-radius: 5% 10% 5%;
     border-right: 2px solid transparent;}
@@ -231,27 +277,16 @@ color:#0077B5 ;
   align-items: center;
 }
 
-
-
-#navbarNav ul li, #navbarNav > ul, .nav-link{
-  background-color: transparent !important;
-}
-
-
-
-.navbar{
-z-index: 99;
-height: 7.5vh;
-}
-
-.navbar .nav-link {
-  color:white;
-}
-
-
-
 #home:hover{
   color:white;
+}
+
+.current_div{
+
+  border-radius: 5% 5% 5% 5%;
+
+  background-color: rgb(46, 47, 47) !important;
+
 }
 
 .Projs{
@@ -265,6 +300,11 @@ height: 7.5vh;
   flex-direction: column;
   align-items: center;
   margin: 0.5%;
+}
+
+.project a{
+text-decoration: underline;
+text-decoration-color: #0077b5;
 }
 
 .project p{
@@ -339,6 +379,18 @@ height: 7.5vh;
 
 }
 
+.navbar-nav{
+
+  font-size: 1.25vw;
+}
+
+.navbar-nav li a:hover{
+color: white;
+font-weight: bolder;
+
+
+}
+
 
 .nav-link, .nav-link:hover {
   color: black;
@@ -366,18 +418,22 @@ height: 7.5vh;
 
 #v-pills-tab{
   background-color: #282828;
-  font-size: 1.4vw;
+  font-size: 1.25vw;
+  width: 8%;
 }
 
 #v-pills-tab button:not(.active){
+
   color:grey !important;
-  font-size: 2.5vh;
+  font-size: 1.2vw;
+
 }
 
 #v-pills-tab .active{
-  background-color: #288E7D !important;
+  background-color: rgba(46, 47, 47, 0.449) !important;
   color: white !important;
-  border: 1px solid grey;
+  border-left: 10px solid #4a839f;
+  color: white !important;
 }
 
 .flexed{
@@ -426,10 +482,11 @@ height: 7.5vh;
 } 
 
 .carousel-control-next-icon, .carousel-control-prev-icon{
-
+  height: 7vh !important;
+  width: 6vh !important;
   border-radius: 10%;
-  background-color: black;
-  opacity: 0.7;
+  background-color: black !important;
+  opacity: 0.8;
 }
 
 /* Imagem paisagem na div 3 */
@@ -437,6 +494,17 @@ height: 7.5vh;
   object-fit: scale-down;
 }
 
+.h5_text_div3{
+  font-size: 1.6vw;
+  font-weight: ;  
+}
+
+.p_text_div3{
+  font-size: 1.2vw;
+}
+
+
+/* Fourth Section */
 /* Personalizar icons no Contacts */
 #socials ul {
   display: flex;
@@ -516,25 +584,19 @@ height: 7.5vh;
 }
 
 #body_contacts{
-margin:1%;
-padding-top:0%;
-
+  margin:1%;
+  padding-top:0%;
 
 }
 
-
-
- #text_stack{
+#text_stack{
   padding:0;
   margin: 0;
   border:0;
   text-align: center;
 }
 
-#text_stack{
 
-  
-}
 
 #contacts_talk{
   padding: 9vh;
@@ -560,7 +622,20 @@ padding-top:0%;
 }
 
 #email i, #address i{
-  color: white;
+  color: #303030;
+  padding-bottom: 1.5vh;
+
+}
+
+#email>a,p{
+  text-decoration: none !important;
+}
+
+
+.address_email{
+  color: white !important;
+  font-size: 1.2vw !important;
+  text-decoration: none !important;
 }
 
 #all_end_page{
@@ -572,12 +647,12 @@ padding-top:0%;
 /* Second Section */
 
 #publisher{
-  font-size: 2vh;
+  font-size: 1.0vw;
 }
 
-#publisher:ac{
+#publisher:active{
   color:grey !important;
-  font-size: 2.1vh;
+  font-size: 1.1vw;
 }
 
 .icons_acess{
@@ -620,4 +695,9 @@ padding-top:0%;
 
 .h1_pdfs{
   padding-bottom: 1%;
+}
+
+
+#h1_projects_title{
+font-size: 2.2vw;
 }
