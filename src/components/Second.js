@@ -198,7 +198,7 @@ Example of use: experiment(hat=hat,expected_balls={'red':2,'green':1}, num_balls
 
     
     <div className="tab-pane fade" id="v-pills-messages" role="tabpanel" aria-labelledby="v-pills-messages-tab">
-      <h1 className='h1_pdfs text-center'>This is some works I've done using Publisher (a Adobe Photoshop lookalike from Microsoft)</h1>
+      <h1 className='h1_pdfs text-center'>Some works I've done using Publisher (a Adobe Photoshop lookalike from Microsoft)</h1>
       <div className='pdfs_div'>
       <Pdfs k={1} file="pdf1" />
       <Pdfs k={2} file="pdf2" />

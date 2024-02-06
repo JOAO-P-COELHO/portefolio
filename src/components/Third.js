@@ -55,7 +55,7 @@ export default function Third() {
             <img id="img_so" src={Building} alt="..."/>
             <div className="carousel-caption d-none d-md-block">
               <h5 className='h5_text_div3' >Ah...just keep building?!</h5>
-              <p className='p_text_div3'>I realized that I like puzzles and I love to build - also -, a lot. So, I decided in 2021 to pursue a career in IT. I'm currently graduating in Computer Science and Engineering (in Universidade Aberta), and studying on my own everything that needs to be known in the field of Front-End. I've falling in love with Back-End too, lately.</p>
+              <p className='p_text_div3'>I realized that I like puzzles and love building - also -, a lot. So, I decided in 2021 to pursue a career in IT. I'm currently graduating in Computer Science and Engineering (in Universidade Aberta), and studying on my own everything that needs to be known in the field of Front-End. I've falling in love with Back-End too, lately.</p>
             </div>
           </div>
           <div className="carousel-item">

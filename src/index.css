@@ -128,6 +128,11 @@ height: 7.5vh;
 
 }
 
+#MySQL{
+  width:10%;
+  height:10.5%;
+  filter: invert(100%) sepia(100%) saturate(1%) hue-rotate(115deg) brightness(106%) contrast(101%);
+}
 /* Front Page | Central section */
 #central{
   display: flex;
@@ -329,32 +334,7 @@ text-decoration-color: #0077b5;
 }
 
 
-/* Cores scrollbar div 2 */
-/* #div2 ::-webkit-scrollbar {
-  width: 10px!important;
-  overflow: scroll;
-  z-index: ;
-  
-}
 
-#div2 ::-webkit-scrollbar-thumb {
-
-  border-radius: 0%;
-  outline-color:grey;
-  outline-style: outset;
-  overflow: scroll;
-  z-index: 0;
-  
-  
-}
-
-#div2 ::-webkit-scrollbar-thumb:hover {
-  background: transparent; 
-  outline-color:rgba(255, 255, 255, 0.552);
-  overflow: scroll;
-  z-index: 0;
-  
-}  */
 
 .tab-content{
   z-index:0 ;
@@ -406,14 +386,38 @@ font-weight: bolder;
   display: flex;
   align-items: center !important;
   height: 100vh;
-  /* background-color: red; */
   padding-bottom: 5vh;
 
 }
 
+
+/* Cores scrollbar div 2 */
+#div2 ::-webkit-scrollbar {
+  width: 2vh!important;
+  height: 2vh;
+  -webkit-box-shadow: inset 0 0 6px rgba(0,0,0,0.3) !important;
+  
+}
+
+#div2 ::-webkit-scrollbar-thumb {
+
+  border-radius: 0%;
+  outline: 2px solid rgba(255, 255, 255, 0.552) !important;
+  background-color: transparent;
+
+}
+
+#div2 ::-webkit-scrollbar-thumb:hover {
+  outline-color:rgba(255, 255, 255, 0.552); 
+} 
+
+.tab-pane {
+  padding-bottom: 1.5vh;
+  padding-right: 1.2vw;
+}
+
 #v-pills-tab{
   background-color: #282828;
-  color: white !important;
 }
 
 #v-pills-tab{
@@ -495,12 +499,13 @@ font-weight: bolder;
 }
 
 .h5_text_div3{
-  font-size: 1.6vw;
-  font-weight: ;  
+  font-size: 1.7vw;
+  font-weight: bold ;  
 }
 
 .p_text_div3{
-  font-size: 1.2vw;
+  font-size: 1.4vw;
+  padding: 0% 1vw;
 }
 
 
@@ -571,17 +576,6 @@ font-weight: bolder;
 }
 
 
-
-#footer{
-  /* font-size:1vw; */
-  /* border: 2px solid black; */
-  /* width: 100%;
-  text-align: center;
-  margin: auto !important;
-  padding: 0 !important;
-  vertical-align: middle; */
-
-}
 
 #body_contacts{
   margin:1%;
@@ -682,13 +676,20 @@ font-weight: bolder;
   height: 70vh;
   /* width: 100%; */
   overflow-y: scroll;
-  overflow-x: none !important;
+  padding-right: 1vh !important;
+
+  /* padding-right: 0.2vw;
+  margin-bottom: 0.7vh; */
+
 }
 
+.react-pdf__Document{
+  padding-right: 0.2vw !important;
+}
 .pdfs_div{
   display:flex !important;
   gap: 1vw;
-  width: 400vw;
+  width: 1000%;
   align-items: center;
 
 }
@@ -701,3 +702,136 @@ font-weight: bolder;
 #h1_projects_title{
 font-size: 2.2vw;
 }
+
+
+/* Querys */
+@media only screen and (max-width: 1440px) {
+  .pdfs{
+    height: 65vh;
+    padding-bottom: 10vh;
+  }
+  .react-pdf__Document{
+    padding-bottom: 0.2vw !important;
+  }
+
+  .h5_text_div3{
+    font-size: 1.9vw;
+  }
+  .p_text_div3 {
+    font-size: 1.3vw;
+    padding: 0% 1vw
+  }
+}
+
+@media only screen and (max-width: 1440px) {
+  .pdfs{
+    height: 65vh;
+    padding-bottom: 10vh;
+  }
+  .react-pdf__Document{
+    padding-bottom: 0.2vw !important;
+  }
+
+  #img_gif_png{
+    height: auto;
+  }
+
+  #img_gif_png:hover{
+    height: auto;
+  }
+
+  .h5_text_div3{
+    font-size: 1.9vw;
+  }
+  .p_text_div3 {
+    font-size: 1.3vw;
+    padding: 0% 1vw
+  }
+
+}
+
+@media only screen and (max-width: 768px) {
+  #img_gif_png{
+    height: auto;
+  }
+
+  #img_gif_png:hover{
+    height: auto;
+  }
+
+  .react-pdf__Page__canvas{
+    width: 100% !important;
+    /* width: 100%; */
+    overflow-y: scroll;
+  }
+}
+
+@media only screen and (max-width: 426px) {
+  #img_gif_png{
+    height: auto;
+  }
+
+  #img_gif_png:hover{
+    height: auto;
+  }
+
+  .react-pdf__Page__canvas{
+    width: 100% !important;
+    /* width: 100%; */
+    overflow-y: scroll;
+  }
+
+  #central{
+    display: flex !important;
+    flex-direction: column !important;
+    align-items: center;
+    justify-content:center;
+}
+
+  #my_img{
+    width: 150%;
+  }
+
+  #middle, #left, #right{
+    align-items: center;
+    justify-content:center;
+  }
+  .main_text_h2{
+    font-size: 4vw;
+  }
+  .main_text_h3{
+    font-size: 2.5vw;
+  }
+  .main_text_h4{
+    font-size: 2.2vw;
+  }
+  
+  #social_front_page li {
+    font-size: 3.7vw;
+  }
+
+  #me{
+    font-size: 4.5vw;
+  }
+  #right #mystack{
+    display: flex;
+
+    padding-top: 5px;
+  }
+
+  #text_stack{
+    padding-top: 10px;
+    padding-right: 10px;
+  }
+  
+  #stack_ref{
+    font-size: 10px;
+  }
+
+  #icons{
+    display: none;
+  }
+}
+
+
+
