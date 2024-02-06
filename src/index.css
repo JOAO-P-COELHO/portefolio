@@ -678,9 +678,6 @@ font-weight: bolder;
   overflow-y: scroll;
   padding-right: 1vh !important;
 
-  /* padding-right: 0.2vw;
-  margin-bottom: 0.7vh; */
-
 }
 
 .react-pdf__Document{
@@ -705,7 +702,7 @@ font-size: 2.2vw;
 
 
 /* Querys */
-@media only screen and (max-width: 1440px) {
+@media only screen and (min-width: 1441px) and (max-width: 2600px) {
   .pdfs{
     height: 65vh;
     padding-bottom: 10vh;
@@ -723,7 +720,7 @@ font-size: 2.2vw;
   }
 }
 
-@media only screen and (max-width: 1440px) {
+@media only screen and (min-width: 1025px) and (max-width: 1440px) {
   .pdfs{
     height: 65vh;
     padding-bottom: 10vh;
@@ -750,13 +747,44 @@ font-size: 2.2vw;
 
 }
 
-@media only screen and (max-width: 768px) {
+@media only screen and (min-width: 769px) and (max-width: 1024px) {
+  .pdfs{
+    height: 65vh;
+    padding-bottom: 10vh;
+  }
+  .react-pdf__Document{
+    padding-bottom: 0.2vw !important;
+  }
+
   #img_gif_png{
-    height: auto;
+    height: 35vh;
+    width: 35vw;
   }
 
   #img_gif_png:hover{
-    height: auto;
+    height: 35vh;
+    width: 35vw;
+  }
+
+  .h5_text_div3{
+    font-size: 1.9vw;
+  }
+  .p_text_div3 {
+    font-size: 1.3vw;
+    padding: 0% 1vw
+  }
+
+}
+
+@media only screen and (min-width: 432px) and (max-width: 768px) {
+  #img_gif_png{
+    height: 40vh;
+    width: 55vw;
+  }
+
+  #img_gif_png:hover{
+    height: 40vh;
+    width: 55vw;
   }
 
   .react-pdf__Page__canvas{
@@ -766,13 +794,15 @@ font-size: 2.2vw;
   }
 }
 
-@media only screen and (max-width: 426px) {
+@media only screen and (min-width: 0px) and (max-width: 431px) {
   #img_gif_png{
-    height: auto;
+    height: 30vh;
+    width: 80vw;
   }
 
   #img_gif_png:hover{
-    height: auto;
+    height: 30vh;
+    width: 80vw;
   }
 
   .react-pdf__Page__canvas{
