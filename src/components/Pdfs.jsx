@@ -1,9 +1,13 @@
 
 import { useEffect, useState } from 'react';
-import { Document, Page } from 'react-pdf';
+import { Document, Page, pdfjs } from 'react-pdf';
 
 
 export default function Pdfs(props) {
+  useEffect(() => {
+    pdfjs.GlobalWorkerOptions.workerSrc = `https://cdnjs.cloudflare.com/ajax/libs/pdf.js/${pdfjs.version}/pdf.worker.js`;
+  });
+
   const [numPages, setNumPages] = useState();
   const [pageNumber, setPageNumber] = useState(1);
   
